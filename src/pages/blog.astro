@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 const PageTitle = "博客页"
 ---
 
@@ -12,7 +15,7 @@ const PageTitle = "博客页"
 		<title>{PageTitle}</title>
 	</head>
 	<body>
-        <a href="/">首页</a>
+        <Navigation/>
 
 		<h1>{PageTitle}</h1>
 		<h2>我的Astro学习博客</h2>
@@ -22,5 +25,7 @@ const PageTitle = "博客页"
             <li><a href="/posts/post-2">我的第二篇博客文章</a></li>
             <li><a href="/posts/post-3">我的第三篇博客文章</a></li>
         </ul>
+
+		<Footer/>
 	</body>
 </html>

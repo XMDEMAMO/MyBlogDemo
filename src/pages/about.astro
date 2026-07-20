@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 const PageTitle = "关于页"
 const identity = {
     name: "马蒂亚斯",
@@ -36,7 +39,7 @@ const skillFontStyle = "oblique"
         <title>{PageTitle}</title>
 	</head>
 	<body>
-        <a href="/">首页</a>
+        <Navigation/>
 
 		<h1>{PageTitle}</h1>
 		<h2>我的Astro网站</h2>
@@ -56,6 +59,7 @@ const skillFontStyle = "oblique"
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
 
+        <Footer/>
         <p>这个是跟着Astro教程做的示例网站，将随着教程不断更新</p>
 	</body>
 </html>
